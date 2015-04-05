@@ -18,8 +18,8 @@
       <tr>
         <td><%= movie.title %></td>
         <td><%= movie.release_date %></td>
-        <td><%= movie.budget %></td>
-        <td><%= movie.box_office %></td>
+        <td><%= '$' + number_to_human(movie.budget) %></td>
+        <td><%= '$' + number_to_human(movie.box_office) %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
